@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ToDo List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="input-area">
+        <h1>To-Do List</h1>
+        <form id="newItemForm">
+            <input type="text" id="newItem" placeholder="Add an item">
+            <!--add JS to 'Submit' and 'Clear List' onclick attributes below-->
+            <button type="button" onclick="addItem()" onKeyPress="return returnKeySubmit(event)">Submit</button> <!--onclick should add input to the ul below-->
+            <button type="button" onclick="clearList()">Clear List</button> <!--onclick should clear the whole list below-->
+        </form>
+    </div>
+    <div>
+        <ul id="to-do-list"> <!--the actual ToDo list-->
+            
+        </ul>
+    </div>
+    <div>
+        <ul id="done-list">
+
+        </ul>
+    </div>
+    
+    <script src="ToDo-list.js"></script>
+</body>
+</html>
