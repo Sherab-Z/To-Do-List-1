@@ -41,6 +41,13 @@ function deleteItem(btn) {
 
 function doneItem(btn) {
     btn.parentNode.style = "text-decoration:line-through; list-style-type:none";
-    btn.innerHTML
+    btn.innerHTML = "Restore";
+    btn.setAttribute("onclick", "restoreItem(this)");
+}
+
+function restoreItem(btn) {
+    btn.parentNode.style = "list-style-type:none";
+    btn.innerHTML = "Done";
+    btn.setAttribute("onclick", "doneItem(this)");
 }
 
