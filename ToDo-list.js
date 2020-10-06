@@ -4,7 +4,7 @@ var item;
 var toDoList = document.getElementById("to-do-list");
 var done;
 
-function addItem() {
+function submitItem() {
     /* add submitted task string to new node for new list item */
     node = document.createElement("li");
     item = document.getElementById("newItem").value;
@@ -22,7 +22,7 @@ function addItem() {
 
 /* allow return key to submit the form & clear the text field */
 function returnKeySubmit(e) {
-    if(e && e.keyCode == 13) {
+    if(e && e.keyCode ==== 13) {
        addItem();
     }
     clearTextField(); 
