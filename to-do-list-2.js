@@ -19,9 +19,12 @@ function submitItem() {
     document.getElementById("text-box").value = '';
     }
 
-/* clear textbox after submitting input */
+/* delete all tasks on to-do-list */
 function clearList() {
-    document.getElementById("to-do-list").innerHTML = '';
+    let list = document.getElementById("to-do-list");
+    while (list.firstChild) {
+        list.removeChild(list.firstChild);
+    }
 }
 
 /* create + append Delete Button to each new list item */
