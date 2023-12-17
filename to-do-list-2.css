@@ -8,7 +8,7 @@
     margin-right: 30%;
 }
 
-#list-container {
+#tasks {
     display: flex;
     flex-wrap: wrap;
   }
@@ -23,4 +23,22 @@
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+}
+
+.task {
+    flex-basis: 33%;
+}
+
+/* Media Query for mid-sized screens */
+@media only screen and (max-width: 768px) {
+    .task {
+        flex-basis: 50%;
+    }
+}
+
+/* Media Query for phones */
+@media only screen and (max-width: 480px) {
+    .task {
+        flex-basis: 100%;
+    }
 }

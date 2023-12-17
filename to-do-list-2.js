@@ -1,17 +1,19 @@
 
 /* Create a new task item from the text-box input, append buttons to the task item, add that to the list, and clear the text-box */
 function addTask() {
-    const li = document.createElement("li");
-    const inputValue = document.getElementById("text-box").value;
-    const t = document.createTextNode(inputValue);
-    li.appendChild(t);
+    const task = document.createElement("li");
+    task.classList.add("task", "box"); // Add the "task" class to the new task el
+
+    const textInput = document.getElementById("text-box").value;
+    const t = document.createTextNode(textInput);
+    task.appendChild(t);
     /* Check user input from form. If valid, create new list item from input */
-    if (inputValue === '') {
+    if (textInput === '') {
         alert("You need to write a task!");
     } else {
-        document.getElementById("tasks").appendChild(li);
-        addDeleteButton(li);
-        addDoneButton(li);
+        document.getElementById("tasks").appendChild(task);
+        addDeleteButton(task);
+        addDoneButton(task);
     }
     /* clears textbox after submitting input */
     document.getElementById("text-box").value = '';
@@ -26,19 +28,19 @@ function clearList() {
 }
 
 /* create + append Delete Button to each new list item */
-function addDeleteButton(li) {
+function addDeleteButton(task) {
     const deleteButton = document.createElement("button");
     deleteButton.innerHTML = "x";
     deleteButton.setAttribute("onclick", "deleteTask(this)");
-    li.appendChild(deleteButton);
+    task.appendChild(deleteButton);
 } 
 
 /*create + append Done Button to each new list item */
-function addDoneButton(li) {
+function addDoneButton(task) {
     const doneButton = document.createElement("button");
     doneButton.innerHTML = "Done";
     doneButton.setAttribute("onclick", "doneTask(this)");
-    li.appendChild(doneButton);
+    task.appendChild(doneButton);
 } 
 
 /* Deletes an individual list item */
