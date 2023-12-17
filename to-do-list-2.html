@@ -9,17 +9,17 @@
 </head>
 
 <body>
-    <div id="form-container">
-        <div id="input-area" class="list-div">
+    <div id="app-container">
+        <div id="input-container" class="box">
             <h1>Things ToDo</h1>
             <form class="form">
                 <input type="text" id="text-box" placeholder="Add an item">
-                <button id ="submit-button" type="button" onclick="addTask()">Submit</button> <!--onclick should add input to "task-list" ul below-->
+                <button id ="submit-button" type="button" onclick="addTask()">Submit</button> <!--onclick should add input to "tasks" ul below-->
                 <button type="button" onclick="clearList()">Clear List</button> <!--onclick should clear the whole list below-->
             </form>
         </div>
-        <div class="list-div">
-            <ul id="task-list" class="list"> <!--the actual ToDo list-->
+        <div id="list-container">
+            <ul id="tasks" class="list"> <!--the actual ToDo list-->
                 
             </ul>
         </div>

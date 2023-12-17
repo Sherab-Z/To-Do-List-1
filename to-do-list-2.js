@@ -1,6 +1,4 @@
 
-
-
 /* Create a new task item from the text-box input, append buttons to the task item, add that to the list, and clear the text-box */
 function addTask() {
     const li = document.createElement("li");
@@ -11,7 +9,7 @@ function addTask() {
     if (inputValue === '') {
         alert("You need to write a task!");
     } else {
-        document.getElementById("task-list").appendChild(li);
+        document.getElementById("tasks").appendChild(li);
         addDeleteButton(li);
         addDoneButton(li);
     }
@@ -21,7 +19,7 @@ function addTask() {
 
 /* delete all tasks on task-list */
 function clearList() {
-    let list = document.getElementById("task-list");
+    let list = document.getElementById("tasks");
     while (list.firstChild) {
         list.removeChild(list.firstChild);
     }
