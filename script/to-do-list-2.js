@@ -2,7 +2,7 @@
 /* Create a new task item from the text-box input, append buttons to the task item, add that to the list, and clear the text-box */
 function addTask() {
     const task = document.createElement("li");
-    task.classList.add("task", "box"); // Add the "task" class to the new task el
+    task.classList.add("task", "box", "responsive-task"); // Add the "task" class to the new task el
 
     const textInput = document.getElementById("text-box").value;
     const t = document.createTextNode(textInput);
