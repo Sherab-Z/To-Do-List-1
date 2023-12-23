@@ -2,7 +2,7 @@
 /* Create a new task item from the text-box input, append buttons to the task item, add that to the list, and clear the text-box */
 function addTask() {
     const template = document.getElementById('task-template');
-    const taskClone = template.contentEditable.cloneNode(true);
+    const taskClone = template.content.cloneNode(true);
     const task = taskClone.querySelector('.task');
     const textElement = taskClone.querySelector('.text');
     
@@ -26,22 +26,6 @@ function clearList() {
         list.removeChild(list.firstChild);
     }
 }
-
-// /* create + append Delete Button to each new list item */
-// function addDeleteButton(task) {
-//     const deleteButton = document.createElement('button');
-//     deleteButton.innerHTML = 'x';
-//     deleteButton.setAttribute('onclick', 'deleteTask(this)');
-//     task.appendChild(deleteButton);
-// } 
-
-// /*create + append Done Button to each new list item */
-// function addDoneButton(task) {
-//     const doneButton = document.createElement('button');
-//     doneButton.innerHTML = 'Done';
-//     doneButton.setAttribute('onclick', 'doneTask(this)');
-//     task.appendChild(doneButton);
-// } 
 
 /* Deletes an individual list item */
 function deleteTask(btn) {
