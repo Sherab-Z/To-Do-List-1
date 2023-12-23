@@ -1,6 +1,6 @@
 
 /* Create a new task item from the text-box input, append buttons to the task item, add that to the list, and clear the text-box */
-function addTask() {
+function addTask() { 
     const template = document.getElementById('task-template');
     const taskClone = template.content.cloneNode(true);
     const task = taskClone.querySelector('.task');
