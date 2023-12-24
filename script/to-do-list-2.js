@@ -29,19 +29,21 @@ function clearList() {
 
 /* Deletes an individual list item */
 function deleteTask(btn) {
-    btn.parentNode.remove();
+    btn.parentNode.parentNode.remove();
 }
 
 /* Done Button adds strikethrough styling for list item; changes Done into Restore Button & links to that function in JS */
 function doneTask(btn) {
-    btn.parentNode.style = 'text-decoration:line-through; list-style-type:none';
-    btn.innerHTML = 'Restore';
+    let taskText = btn.parentNode.previousElementSibling;
+    taskText.style = 'text-decoration:line-through; list-style-type:none';
+    btn.innerHTML = 'restore';
     btn.setAttribute('onclick', 'restoreTask(this)');
 }
 
 /* restores list item to normal styling; changes button back to Done */
 function restoreTask(btn) {
-    btn.parentNode.style = 'list-style-type:none';
-    btn.innerHTML = 'Done';
+    let taskText = btn.parentNode.previousElementSibling;
+    taskText.style = 'text-decoration: none; list-style-type:none';
+    btn.innerHTML = 'done';
     btn.setAttribute('onclick', 'doneTask(this)');
 }
