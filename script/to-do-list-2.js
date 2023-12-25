@@ -1,23 +1,39 @@
 
 /* Create a new task item from the text-box input, append buttons to the task item, add that to the list, and clear the text-box */
 function addTask() { 
-    const template = document.getElementById('task-template');
-    const taskClone = template.content.cloneNode(true);
-    const task = taskClone.querySelector('.task');
-    const textElement = taskClone.querySelector('.text');
-    
+    // create task node from template
+    const taskTemplate = document.getElementById('task-template');
+    const task = taskTemplate.content.cloneNode(true);
+    const textEl = task.querySelector('.text');
+    // append input text from textbox to task
     const textInput = document.getElementById('text-box').value;
     const t = document.createTextNode(textInput);
-    textElement.appendChild(t);
-    /* Check user input from form. If valid, create new list item from input. */
+    textEl.appendChild(t);
+    // Check user input from form. If valid, create new list item from input
     if (textInput === '') {
         alert('You need to write a task!');
     } else {
-        document.getElementById('tasks').appendChild(taskClone);
+        document.getElementById('tasks').appendChild(task);
     }
     /* clears textbox after submitting input */
     document.getElementById('text-box').value = '';
     }
+
+function makeTask() {
+
+}
+
+function appendBtnsToTask() {
+
+}
+
+function addTaskToList() {
+
+}
+
+function clearTextBox() {
+    
+}
 
 /* delete all tasks on task-list */
 function clearList() {
