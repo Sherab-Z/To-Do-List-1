@@ -20,8 +20,7 @@
             </form>
         </div>
         <div id='list-container'>
-            <ul id='tasks' class='list'> <!--the actual ToDo list-->
-               <template id='task-template'>
+            <template id='task-template'>
                 <li class='task box responsive-task'>
                     <span class='text'></span>
                     <div class='buttons'>
@@ -29,7 +28,9 @@
                         <button onclick='deleteTask(this)'>x</button>
                     </div>
                 </li>
-               </template> 
+            </template> 
+            
+            <ul id='tasks' class='list'> <!--the actual ToDo list-->
             </ul>
         </div>
     </div>
